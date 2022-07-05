@@ -38,6 +38,6 @@ OpenJDK 64-Bit Server VM (build 25.312-b07, mixed mode)
 Java Runtime Environment (JRE)
 
 ```bash
-javac -version
+$ javac -version
 javac 1.8.0_312
 ```
