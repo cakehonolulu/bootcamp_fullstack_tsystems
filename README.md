@@ -6,6 +6,7 @@
 2. [Preface](#Preface)
 3. [Contents](#Contents)
 4. [Prerequisites](#Prerequisites)
+4. [Additional Information](#Additional-Information)
 
 ## Preface
 
@@ -41,3 +42,7 @@ Java Runtime Environment (JRE)
 $ javac -version
 javac 1.8.0_312
 ```
+
+## Additional Information
+
+![Bootcamp](https://media-exp1.licdn.com/dms/image/C4E22AQHKC56hmf7dow/feedshare-shrink_1280/0/1646736857682?e=1660176000&v=beta&t=kARW0AHtvOmNCio9eTkMKqvgOh7nnTEBz8nNlng7IWM)
