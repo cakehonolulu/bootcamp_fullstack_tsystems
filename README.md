@@ -6,7 +6,7 @@
 2. [Preface](#Preface)
 3. [Contents](#Contents)
 4. [Prerequisites](#Prerequisites)
-4. [Additional Information](#Additional-Information)
+5. [Additional Information](#Additional-Information)
 
 ## Preface
 
