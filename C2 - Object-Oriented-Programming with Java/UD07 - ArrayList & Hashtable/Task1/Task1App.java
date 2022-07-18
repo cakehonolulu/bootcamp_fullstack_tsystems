@@ -119,7 +119,7 @@ public class Task1App {
 		 * with a numeric value; but an ArrayList is by far, more
 		 * convenient.
 		 */
-		ArrayList <Float> m_student_marks = new ArrayList <> ();
+		ArrayList <Float> m_student_marks = new ArrayList <Float> ();
 
 		// Fill the students struct with data provided by the user
 		m_students_fill(m_students, m_student_marks);
