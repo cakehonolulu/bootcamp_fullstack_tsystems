@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "62e0fd0cad4d91b3dfdbafe5"
+  },
+  "codigo": 1,
+  "nombre": "Ventas",
+  "presupuesto": 12000
+},{
+  "_id": {
+    "$oid": "62e0fd29ad4d91b3dfdbafe6"
+  },
+  "codigo": 35,
+  "nombre": "I+D",
+  "presupuesto": 200000
+},{
+  "_id": {
+    "$oid": "62e148bba5cd108b65a0bdad"
+  },
+  "codigo": 2,
+  "nombre": "guadalajara",
+  "ventas": 100
+},{
+  "_id": {
+    "$oid": "62e148bba5cd108b65a0bdae"
+  },
+  "codigo": 3,
+  "nombre": "Papadelta",
+  "ventas": 10
+}]

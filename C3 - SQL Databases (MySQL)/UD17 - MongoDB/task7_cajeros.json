@@ -1,0 +1,19 @@
+[{
+    "_id": {
+      "$oid": "62ebe8df64fe2924cb212ed6"
+    },
+    "codigoCajero": 1337,
+    "NomApels": "Cajero 1"
+  },{
+    "_id": {
+      "$oid": "62ebe9609077dad22afe465f"
+    },
+    "codigoCajero": 1,
+    "NomApels": "Cajero 2"
+  },{
+    "_id": {
+      "$oid": "62ebe99e233240aa9738a1fc"
+    },
+    "codigoCajero": 2,
+    "NomApels": "Cajero 3"
+  }]

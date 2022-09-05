@@ -1,0 +1,19 @@
+[{
+    "_id": {
+      "$oid": "62ebeb085fadf00a413f9625"
+    },
+    "codigoNumSerie": 1243,
+    "Nombre": "Team #1"
+  },{
+    "_id": {
+      "$oid": "62ebeb085fadf00a413f9625"
+    },
+    "codigoNumSerie": 23,
+    "Nombre": "Team #2"
+  },{
+    "_id": {
+      "$oid": "62ebeb0c788f705ee188aac8"
+    },
+    "codigoNumSerie": 214,
+    "Nombre": "Team #3"
+  }]

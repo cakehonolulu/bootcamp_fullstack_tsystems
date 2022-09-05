@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "62e10644675980e496f3551d"
+  },
+  "codigo": 1,
+  "nombre": "maria antonieta",
+  "pelicula": 1
+},{
+  "_id": {
+    "$oid": "62e10962675980e496f3551e"
+  },
+  "codigo": 2,
+  "nombre": "sala 23",
+  "pelicula": 2
+},{
+  "_id": {
+    "$oid": "62e10fd5d68e7c1875486026"
+  },
+  "codigo": 3,
+  "nombre": "sala relax",
+  "pelicula": 3
+},{
+  "_id": {
+    "$oid": "62e10fedd68e7c1875486027"
+  },
+  "codigo": 4,
+  "nombre": "sala azul",
+  "pelicula": 3
+}]

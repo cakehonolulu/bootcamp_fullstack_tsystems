@@ -1,0 +1,22 @@
+[{
+    "_id": {
+      "$oid": "62ebeb9bd36597823f880054"
+    },
+    "codigoIdProyecto": 2354,
+    "Nombre": "Ana",
+    "Horas": 325
+  },{
+    "_id": {
+      "$oid": "62ebeb9d1fa9313a6658d597"
+    },
+    "codigoIdProyecto": 123,
+    "Nombre": "Jorge",
+    "Horas": 523
+  },{
+    "_id": {
+      "$oid": "62ebeba06145cd316c33db14"
+    },
+    "codigoIdProyecto": 412,
+    "Nombre": "Nadia",
+    "Horas": 124
+  }]

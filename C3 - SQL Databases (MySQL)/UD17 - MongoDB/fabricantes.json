@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "62e0fb3fad4d91b3dfdbafe0"
+  },
+  "codigo": 1,
+  "nombre": "Ferrari"
+},{
+  "_id": {
+    "$oid": "62e14844a5cd108b65a0bdaa"
+  },
+  "codigo": 2,
+  "nombre": "sony"
+},{
+  "_id": {
+    "$oid": "62e14844a5cd108b65a0bdab"
+  },
+  "codigo": 3,
+  "nombre": "nintendo"
+},{
+  "_id": {
+    "$oid": "62e14844a5cd108b65a0bdac"
+  },
+  "codigo": 4,
+  "nombre": "microsoft"
+}]

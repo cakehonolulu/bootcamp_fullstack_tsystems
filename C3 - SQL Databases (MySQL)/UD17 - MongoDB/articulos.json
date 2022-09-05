@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "62e0fba7ad4d91b3dfdbafe1"
+  },
+  "codigo": 1,
+  "nombre": "coche",
+  "precio": 120,
+  "fabricante": 1
+},{
+  "_id": {
+    "$oid": "62e14742a5cd108b65a0bda7"
+  },
+  "codigo": 2,
+  "nombre": "Playstation",
+  "precio": 50,
+  "fabricante": 2
+},{
+  "_id": {
+    "$oid": "62e147bea5cd108b65a0bda8"
+  },
+  "codigo": 3,
+  "nombre": "Switch",
+  "precio": 350,
+  "fabricante": 3
+},{
+  "_id": {
+    "$oid": "62e147bea5cd108b65a0bda9"
+  },
+  "codigo": 4,
+  "nombre": "xbox",
+  "precio": 100,
+  "fabricante": 4
+}]

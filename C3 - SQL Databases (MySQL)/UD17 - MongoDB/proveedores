@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "62e10db0675980e496f3552a"
+  },
+  "id": "123a",
+  "nombre": "fabrica chatarras"
+},{
+  "_id": {
+    "$oid": "62e110edd68e7c1875486038"
+  },
+  "id": "111a",
+  "nombre": "metales.sl"
+},{
+  "_id": {
+    "$oid": "62e11111d68e7c1875486039"
+  },
+  "id": "222a",
+  "nombre": "suminitros agricolas"
+}]

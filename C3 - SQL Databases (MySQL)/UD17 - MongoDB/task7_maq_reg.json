@@ -1,0 +1,19 @@
+[{
+    "_id": {
+      "$oid": "62ebe9f2500e75c8b01344ae"
+    },
+    "codigoMaqReg": 123,
+    "Piso": 3
+  },{
+    "_id": {
+      "$oid": "62ebe9f5bd9374502a643d3d"
+    },
+    "codigoMaqReg": 1,
+    "Piso": 4
+  },{
+    "_id": {
+      "$oid": "62ebe9f7be8c288c593d4c93"
+    },
+    "codigoMaqReg": 3,
+    "Piso": 2
+  }]

@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "62e14a2ca5cd108b65a0bdb6"
+  },
+  "numReferencia": "a",
+  "contenido": "Consolas",
+  "valor": 54632,
+  "almacen": 2
+},{
+  "_id": {
+    "$oid": "62e14a45a5cd108b65a0bdb7"
+  },
+  "numReferencia": "sa",
+  "contenido": "Ofimatica",
+  "valor": 4582,
+  "almacen": 3
+},{
+  "_id": {
+    "$oid": "62e14a58a5cd108b65a0bdb8"
+  },
+  "numReferencia": "gd",
+  "contenido": "Puzles",
+  "valor": 100,
+  "almacen": 4
+}]

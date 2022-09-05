@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "62e10afa675980e496f35521"
+  },
+  "dni": "11111111a",
+  "nomApell": "joselito lopez",
+  "dniJefe": "22222222a",
+  "despacho": 1
+},{
+  "_id": {
+    "$oid": "62e10b24675980e496f35522"
+  },
+  "dni": "22222222a",
+  "nomApell": "andres ruiz",
+  "despacho": 1
+},{
+  "_id": {
+    "$oid": "62e1103ed68e7c187548602c"
+  },
+  "dni": "99999999a",
+  "nomApell": "maria perez",
+  "despacho": 2
+},{
+  "_id": {
+    "$oid": "62e1109cd68e7c1875486031"
+  },
+  "dni": "55555555a",
+  "nomApell": "pepito grillo",
+  "dniJefe": "99999999a",
+  "despacho": 2
+}]

@@ -1,0 +1,22 @@
+[{
+    "_id": {
+      "$oid": "62ebe9a55240c14ae6dc1d28"
+    },
+    "codigoProductos": 45,
+    "Nombre": "Cajero 1",
+    "Precio": 40
+  },{
+    "_id": {
+      "$oid": "62ebe9a755d8396c5df67fa8"
+    },
+    "codigoProductos": 123,
+    "Nombre": "Cajero 2",
+    "Precio": 30
+  },{
+    "_id": {
+      "$oid": "62ebe9aa9e536cca68f59ab5"
+    },
+    "codigoProductos": 3412,
+    "Nombre": "Cajero 3",
+    "Precio": 10
+  }]

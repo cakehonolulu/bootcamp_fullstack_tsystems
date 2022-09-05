@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "62e0fccaad4d91b3dfdbafe4"
+  },
+  "DNI": "48003310A",
+  "nombre": "Juan",
+  "apellidos": "Diaz Martinez",
+  "departamento": 35
+},{
+  "_id": {
+    "$oid": "62e1492ea5cd108b65a0bdaf"
+  },
+  "dni": "485669973A",
+  "nombre": "Manolo",
+  "apellidos": "Martinez diaz",
+  "departamento": 2
+},{
+  "_id": {
+    "$oid": "62e14944a5cd108b65a0bdb0"
+  },
+  "dni": "485387973A",
+  "nombre": "Maria",
+  "apellidos": "Martinez Duran",
+  "departamento": 3
+},{
+  "_id": {
+    "$oid": "62e14963a5cd108b65a0bdb1"
+  },
+  "dni": "439887973A",
+  "nombre": "Amalia",
+  "apellidos": "Diaz Duran",
+  "departamento": 4
+}]

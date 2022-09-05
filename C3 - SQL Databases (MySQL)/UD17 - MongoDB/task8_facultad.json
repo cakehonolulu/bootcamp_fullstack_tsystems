@@ -1,0 +1,19 @@
+[{
+    "_id": {
+      "$oid": "62ebeaec5a8e900bba0d6977"
+    },
+    "codigoFacultad": 213,
+    "Nombre": "URV"
+  },{
+    "_id": {
+      "$oid": "62ebeaf0a3d98a3061d8cf5c"
+    },
+    "codigoFacultad": 4654,
+    "Nombre": "UOC"
+  },{
+    "_id": {
+      "$oid": "62ebeaf2048f59d82c8321c7"
+    },
+    "codigoFacultad": 5234,
+    "Nombre": "UPC"
+  }]

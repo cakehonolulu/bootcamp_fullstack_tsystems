@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "62e0fea1ad4d91b3dfdbafea"
+  },
+  "codigo": 1,
+  "lugar": "barcelona",
+  "capacidad": 120
+},{
+  "_id": {
+    "$oid": "62e149d8a5cd108b65a0bdb3"
+  },
+  "codigo": 2,
+  "lugar": "Madrid",
+  "capacidad": 200
+},{
+  "_id": {
+    "$oid": "62e149e4a5cd108b65a0bdb4"
+  },
+  "codigo": 3,
+  "lugar": "Valencia",
+  "capacidad": 1
+},{
+  "_id": {
+    "$oid": "62e149f6a5cd108b65a0bdb5"
+  },
+  "codigo": 4,
+  "lugar": "Sevilla",
+  "capacidad": 35
+}]

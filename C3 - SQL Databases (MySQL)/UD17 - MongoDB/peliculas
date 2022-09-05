@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "62e109b9675980e496f3551f"
+  },
+  "codigo": 1,
+  "nombre": "harry potter",
+  "calificacionEdad": 12
+},{
+  "_id": {
+    "$oid": "62e109d9675980e496f35520"
+  },
+  "codigo": 2,
+  "nombre": "harry potter 2",
+  "calificacionEdad": 12
+},{
+  "_id": {
+    "$oid": "62e10f41d68e7c1875486021"
+  },
+  "codigo": 3,
+  "nombre": "harry potter 3",
+  "calificacionEdad": 12
+},{
+  "_id": {
+    "$oid": "62e10f52d68e7c1875486022"
+  },
+  "codigo": 4,
+  "nombre": "harry potter 4",
+  "calificacionEdad": 12
+},{
+  "_id": {
+    "$oid": "62e10f64d68e7c1875486023"
+  },
+  "codigo": 5,
+  "nombre": "harry potter 5",
+  "calificacionEdad": 12
+}]
