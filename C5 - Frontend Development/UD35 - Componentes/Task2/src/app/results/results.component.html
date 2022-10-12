@@ -1,0 +1,18 @@
+<div *ngIf="results != null;">
+  <table class="table mt-4">
+      <thead class="table">
+          <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message</th>
+          </tr>
+      </thead>
+      <tbody *ngFor="let item of results">
+          <tr>
+              <td>{{item.name}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.message}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

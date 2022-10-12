@@ -1,0 +1,30 @@
+<div class="container">
+    <br><br><br>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <ng-container *ngIf="results">
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="{{ results.name }}"><br>
+
+            <label for="status">Status:</label><br>
+            <input type="text" id="status" name="status" value="{{ results.status }}">
+
+            <label for="species">Species:</label><br>
+            <input type="text" id="species" name="species" value="{{ results.species }}">
+
+            <label for="gender">Gender:</label><br>
+            <input type="text" id="gender" name="gender" value="{{ results.gender }}">
+
+            <label for="origin">Origin:</label><br>
+            <input type="text" id="origin" name="origin" value="{{ results.origin }}">
+
+            <label for="image">Image:</label><br>
+            <input type="text" id="image" name="image" value="{{ results.image }}">
+
+            <br><br>
+
+            <button class="btn btn-primary" (click)="savecharacter()">Save character</button>
+        </form>
+    </ng-container>
+  </div>
+</div>

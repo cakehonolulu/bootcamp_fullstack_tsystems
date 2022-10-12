@@ -1,0 +1,215 @@
+<app-top-admin></app-top-admin>
+<br><br>
+<div class="container w-75 mb-w-100 m-0-auto pt-5 pb-2 background">
+    <br><br><br>
+    <i class="bi bi-arrow-left-circle-fill" style="color:blue; margin:15px 0px 0px 15px; font-size: 25px;"
+        (click)="goBackTemplates();"></i>
+    <div class="card">
+        <div class="card-body" style="margin-left: 15px;" id="pdf-container">
+            <div *ngFor="let item of items">
+                <div class="m-0-auto" *ngIf="!preview">
+                    <div class="row btn-item mt-3 p-3 border-item rounded border-w-3 border-dotted {{item.type}}">
+                        <div class="col-md-9 " style="align-items: center;">
+                            <hr *ngIf="item.type == 'linea'">
+                            <img style="width: {{item.width}}%;" *ngIf="item.type == 'img'" src="{{item.content}}">
+                            <img *ngIf="item.type == 'firmar'" src="../../assets/img/firmar.jpg">
+                            <div *ngIf="item.type == 'enlace'">
+                                <p class="h4 mb-0">{{item.text}}</p>
+                                <p class="mt-0 text-lightgrey">{{item.content}}</p>
+                                <div class="input-group">
+                                    <input id="content{{item.id}}" type="text" class="form-control"
+                                        placeholder="Contenido">
+                                    <input id="enlace{{item.id}}" type="text" class="form-control" placeholder="Enlace">
+                                </div>
+                            </div>
+                            <div *ngIf="item.type == 'firma'">
+                                <signature-pad style="background: rgba(255, 255, 255, 0); display: inline-block;" #signature [options]="signaturePadOptions" (drawStart)="drawStart($event)" (drawEnd)="drawComplete($event, item.id)"></signature-pad>
+                            </div>
+                            <div
+                                *ngIf="(item.type == 'h1' || item.type == 'h2' || item.type == 'h3' || item.type == 'h4')">
+                                <p *ngIf="item.content != ''" class="{{item.type}}">{{item.content}}</p>
+                                <p *ngIf="item.content == ''" class="{{item.type}}">{{item.text}}</p>
+                                <div class="input-group">
+                                    <input id="content{{item.id}}" *ngIf="item.type != 'h4'" type="text"
+                                        class="form-control w-100">
+                                    <textarea id="content{{item.id}}" *ngIf="item.type == 'h4'"
+                                        class="form-control w-100" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex mb-flx-dr" style="align-items: center; justify-content: flex-end"
+                            *ngIf="item.type != 'espacio' && item.type != 'linea' && item.type != 'firma' && item.type != 'img'">
+                            <div class="d-grid">
+                                <button (click)="editarItem(item.id)" class="btn btn-success btn-block mb-btn">Edit <i
+                                        class="bi bi-pencil-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex mb-img-btn" style="align-items: center; justify-content: flex-end"
+                            *ngIf="item.type=='img'">
+                            <div class="d-grid">
+                                <div>
+                                    <button class="btn btn-dark mx-1" data-bs-toggle="modal" data-bs-target="#misImagenes"
+                                    (click)="myImages(); passId(item.id);"><i class="bi bi-images"></i></button>
+                                <button class="btn btn-dark mx-1" data-bs-toggle="modal" data-bs-target="#subirImagen"
+                                    (click)=" passId(item.id);"><i class="bi bi-upload"></i></button>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-left f-left">Image Sizer</p>
+                                    <input class="form-range f-left" value="{{item.width}}" type="range" min="20" max="100" id="range{{item.id}}" (change)="imageSizer(item.id)">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div *ngIf="preview">
+                    <p *ngIf="item.type == 'h1' || item.type == 'h2' || item.type == 'h3' || item.type == 'h4'"
+                        class="{{item.type}}">{{item.text}}</p>
+                        <img *ngIf="item.type == 'img'" src="{{item.content}}" style="width: {{item.width}};">
+                    <a *ngIf="item.type == 'enlace'" href="{{item.content}}">{{item.text}}</a>
+                    <div class="{{item.type}}" *ngIf="item.type == 'espacio' || item.type == 'linea'">
+                        <hr *ngIf="item.type == 'linea'">
+                    </div>
+                    <img *ngIf="item.type == 'firma'" src="{{ item.content }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container mb-5 w-50 m-0-auto">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="d-grid mt-3">
+                <button (click)="previewPDF()" class="btn btn-primary btn-block"><span *ngIf="!preview">Preview <i
+                            class="bi bi-eye"></i></span><span *ngIf="preview">Continue Editing <i
+                            class="bi bi-eye-slash"></i></span></button>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="d-grid mt-3">
+                <button (click)="generarPDF()" type="button" class="btn btn-success" data-bs-toggle="modal"
+                    data-bs-target="#generatePdfModal">
+                    Generate PDF <i class="bi bi-filetype-pdf"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="generatePdfModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PDF</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="h4">Give your pdf a name.</p>
+                <div class="input-group">
+                    <input id="inputNamePDF" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button (click)="exportHtmlToPDF()" type="button" class="btn btn-primary"
+                    data-bs-dismiss="modal">Generate PDF <i class="bi bi-filetype-pdf"></i> </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal misImagenes-->
+<div class="modal fade" id="misImagenes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Choose Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="width:100% ;height: 200px; overflow-y: scroll;">
+                    <div class="card-body">
+                        <div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="imgs!=null else espera">
+                            <div class="col" *ngFor="let i of imgs">
+                                <div class="card">
+                                    <button (click)="setImage(i.src);"> <img src={{i.src}} class="card-img-top w-100"
+                                            style="width:100% ; height:50px; object-fit: contain;" alt="...">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Use Image</button>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #espera> Loading images....</ng-template>
+<!-- Modal subirImagen-->
+<div class="modal fade" id="subirImagen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Upload Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mt-3">
+                    <label class="mr-2">Upload your image:</label>
+                    <br>
+                    <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)">
+                </div>
+            </div>
+            <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.
+            </p>
+            <div class="image-area mt-4"><img id="imageResult" src="#" alt=""
+                    class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save
+                    changes</button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title">Amazon S3 Upload</h4>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="!finished" class="d-flex flex-column align-items-center justify-content-center">
+                <div class="row">
+                    <div class="spinner-border text-warning" role="status"></div>
+                 </div>
+                 <div class="row">
+                   <strong>Uploading...</strong>
+                 </div>
+            </div>
+            <div *ngIf="finished" class="d-flex align-items-center">
+                <div class="swal2-icon swal2-success swal2-animate-success-icon">
+                    <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+                      <span class="swal2-success-line-tip"></span>
+                      <span class="swal2-success-line-long"></span>
+                      <div class="swal2-success-ring"></div> 
+                      <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                      <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+                     </div>
+            </div>
+            <div *ngIf="modalError" class="d-flex align-items-center">
+                <div class="swal2-icon swal2-error swal2-animate-error-icon" style="display: flex;"><span class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span></div>
+            </div>
+        </div>
+      </ng-template>
+
+    <ng-template #espera>Loading images ....</ng-template>
+
+</div>

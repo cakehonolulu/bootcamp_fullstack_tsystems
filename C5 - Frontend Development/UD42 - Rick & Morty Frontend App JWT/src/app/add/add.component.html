@@ -1,0 +1,40 @@
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center" *ngIf="token == 'NOT_FOUND'">
+    <h3 style="text-align: center;">
+        <strong>Please login</strong><br>
+        <strong>Redirecting in 2 seconds...</strong>
+        {{redirect()}}
+    </h3>
+</div>
+
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center" *ngIf="token != 'NOT_FOUND' && roles != 'admin'">
+    <h3 style="text-align: center;">
+        <strong>Please login</strong><br>
+        <strong>Redirecting in 2 seconds...</strong>
+        {{redirectUnpriv()}}
+    </h3>
+</div>
+
+
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center" *ngIf="token != 'NOT_FOUND' && roles == 'admin'">
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" style="margin-bottom: 1rem;"><br>
+
+        <label for="status">Status:</label><br>
+        <input type="text" id="status" name="status" style="margin-bottom: 1rem;"><br>
+
+        <label for="species">Species:</label><br>
+        <input type="text" id="species" name="species" style="margin-bottom: 1rem;"><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="gender" style="margin-bottom: 1rem;"><br>
+
+        <label for="origin">Origin:</label><br>
+        <input type="text" id="origin" name="origin" style="margin-bottom: 1rem;"><br>
+
+        <label for="image">Image:</label><br>
+        <input type="text" id="image" name="image" style="margin-bottom: 1rem;"><br>
+
+        <button class="btn btn-primary" (click)="addcharacter()">Add character</button>
+    </form>
+</div>

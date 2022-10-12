@@ -1,0 +1,125 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <!-- Container wrapper -->
+    <a class="navbar-brand" href="#">
+      <img style="border-radius: 50%;" src="https://i.pinimg.com/736x/69/eb/7c/69eb7c7122973027d35bb6d82e95ef4c.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Rick and Morty ✨
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+      </ul>
+
+    
+        <!-- Icons -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" *ngIf="isLoggedIn" routerLink="/characters">Characters</a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" *ngIf="roles == 'admin'" routerLink="/add">Add Characters</a>
+          </li>
+          <!--<li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" *ngIf="!isLoggedIn">Register</a>
+          </li>-->
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" routerLink="/about">About</a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <button type="button" class="btn btn-outline-success" *ngIf="!isLoggedIn" data-bs-toggle="modal" data-bs-target="#myModal">
+              Login
+            </button>
+          </li>
+          <div *ngIf="isLoggedIn">
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" routerLink="/profile">{{ usernameView }}</a>
+            </li>
+          </div>
+          <div *ngIf="isLoggedIn">
+            <li class="nav-item me-3 me-lg-0">
+              <button type="button" class="btn btn-outline-danger" (click)="logout()">Log Out</button>
+            </li>
+          </div>
+        </ul>
+    </div>
+    
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+<router-outlet></router-outlet>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog centerModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-left">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <p class="mb-0 mt-2">Username</p>
+          <div class="form-group">
+            <input type="text" name="username" class="form-control" [(ngModel)]="form.username" required #username="ngModel"> <br>
+            <div class="alert alert-danger" role="alert" *ngIf="username.errors && f.submitted">
+              Username is required!
+            </div>
+          </div>
+          <p class="mb-0 mt-2">Password</p>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" [(ngModel)]="form.password" required minlength="6" #password="ngModel"> <br>
+            <div class="alert alert-danger" role="alert" *ngIf="password.errors && f.submitted">
+              <div *ngIf="password.errors['required']">Password is required!</div>
+              <div *ngIf="password.errors['minlength']">Password must be at least 6 characters!</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" >Login</button>
+          </div>
+
+          <div class="form-group">
+            <div class="alert alert-danger" role="alert" *ngIf="form.submitted && isLoginFailed">
+              Login failed: {{ errorMessage }}
+            </div>
+          </div>
+        </form>
+        <br>
+        <div class="alert alert-success" *ngIf="isLoggedInView">
+          Logged in as {{ usernameView }}<br>
+          Redirecting in 2 seconds
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+<!-- Navbar -->
+

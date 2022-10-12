@@ -1,0 +1,40 @@
+p {
+    font-size: 15px;
+    font-family: Lucida Sans Unicode;
+}
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 1px solid #81b959;
+    margin-top: 1px;
+
+}
+
+.webTitle {
+    letter-spacing: 3px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Lucida Sans Unicode;
+    display: table;
+    margin: 0 auto;
+}
+
+.webContent {
+    border: 2px solid lightgrey;
+    padding: 20px;
+}
+
+.article {
+    font-size: 20px;
+    color: #81b959;
+    font-family: Lucida Sans Unicode;
+    font-weight: bold;
+}
+
+.subarticle {
+    font-size: 17px;
+    color: #be8035;
+    font-family: Lucida Sans Unicode;
+    font-weight: bold;
+}

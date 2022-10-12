@@ -1,0 +1,87 @@
+p {
+    font-size: 15px;
+    font-family: Lucida Sans Unicode;
+}
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 1px solid #81b959;
+    margin-top: 1px;
+
+}
+
+.webTitle {
+    letter-spacing: 3px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Lucida Sans Unicode;
+    display: table;
+    margin: 0 auto;
+}
+
+#webStruct {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    width: 900px;
+}
+
+#links {
+    flex: 1;
+    margin-right: 4%;
+}
+
+#contents {
+    
+
+}
+
+.webContent {
+    border: 2px solid lightgrey;
+    padding: 20px;
+}
+
+.article {
+    font-size: 20px;
+    color: #81b959;
+    font-family: Lucida Sans Unicode;
+    font-weight: bold;
+}
+
+.subarticle {
+    font-size: 17px;
+    color: #be8035;
+    font-family: Lucida Sans Unicode;
+    font-weight: bold;
+}
+
+#button {
+    padding-left: 1%;
+}
+
+#button li {
+    font-family: Lucida Sans Unicode;
+    list-style: none;
+    text-align: center;
+    background-color: #cbe783;
+    margin-bottom: 4%;
+    width: 115px;
+    line-height: 40px;
+}
+
+#button li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+#button li a:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: #8fa94d;
+}
+
+#buttonActive {
+    background-color: #e5cdb2;
+}

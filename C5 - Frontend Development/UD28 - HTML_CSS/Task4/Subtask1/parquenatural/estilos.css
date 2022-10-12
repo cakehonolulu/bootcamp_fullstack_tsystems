@@ -1,0 +1,18 @@
+p {
+    font-size: 15px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.article {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subarticle {
+    font-size: 17px;
+    font-weight: bold;
+}

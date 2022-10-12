@@ -1,0 +1,48 @@
+<app-top-beginning></app-top-beginning>
+<app-nav-beginning></app-nav-beginning>
+<div class="container">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-primary-to-secondary p-4">
+        <h5 class="modal-title font-alt text-white" id="loginModelLabel">Login</h5>
+        <button class="btn-close btn-close-white" type="button"
+        routerLink="/home" aria-label="Close"></button>
+      </div>
+      <div class="modal-body border-0 p-4">
+        <div class="modal-body text-left">
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <p class="mb-0 mt-2">Email</p>
+            <div class="form-group">
+              <input type="text" name="email" class="form-control" [(ngModel)]="form.email" required #email="ngModel"> <br>
+              <div class="alert alert-danger" role="alert" *ngIf="email.errors && f.submitted">
+                Email is required!
+              </div>
+            </div>
+            <p class="mb-0 mt-2">Password</p>
+            <div class="form-group">
+              <input type="password" name="password" class="form-control" [(ngModel)]="form.password" required minlength="4" #password="ngModel"> <br>
+              <div class="alert alert-danger" role="alert" *ngIf="password.errors && f.submitted">
+                <div *ngIf="password.errors['required']">Password is required!</div>
+                <div *ngIf="password.errors['minlength']">Password must be at least 6 characters!</div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" >Login</button>
+            </div>
+              
+            <div class="form-group mt-3">
+              <div class="alert alert-danger" role="alert" *ngIf="isLoginFailed">
+                {{ errorMessage }}
+              </div>
+            </div>
+          </form>
+          <br>
+          <div class="alert alert-success" *ngIf="isLoggedInView">
+            Logged in as {{ usernameView }}<br>
+            Redirecting in 2 seconds
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

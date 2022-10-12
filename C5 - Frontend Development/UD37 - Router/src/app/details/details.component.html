@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-md-center align-items-center vh-100">
+  <div>
+    <ng-container *ngIf="results">
+    <img src="{{ results.image }}" width="300px" height="300px" class="card-img-top" alt="..." />
+    <br><br>
+    <h3><span style="font-weight: bold;">Name: </span>{{ results.name }}</h3>
+    <h3><span style="font-weight: bold;">Status: </span>{{ results.status }}</h3>
+    <h3><span style="font-weight: bold;">Species: </span>{{ results.species }}</h3>
+    <h3><span style="font-weight: bold;">Gender: </span>{{ results.gender }}</h3>
+  </ng-container>
+  </div>
+</div>

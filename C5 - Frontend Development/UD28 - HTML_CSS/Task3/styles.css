@@ -1,0 +1,35 @@
+body {
+    background-color: #fff9ef;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: Arial;
+    background-color: #ffdb8f;
+}
+
+h3 {
+    color: #6d9bbd;
+    font-family: Arial;
+    font-size: 30px;
+}
+
+.info {
+    font-style: italic;
+    color: #7399b0;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.step {
+    font-weight: bold;
+    color: #32576e;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.list {
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: Arial;
+}

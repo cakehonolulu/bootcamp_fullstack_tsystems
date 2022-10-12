@@ -1,0 +1,20 @@
+<div *ngIf="temporal != null;">
+  <table class="table mt-4">
+      <thead class="table">
+          <tr>
+              <th>Name</th>
+              <th>SSN</th>
+              <th>Address</th>
+              <th>Group</th>
+          </tr>
+      </thead>
+      <tbody *ngFor="let user of temporal">
+          <tr>
+              <td>{{user.name}}</td>
+              <td>{{user.ssn}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.group}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

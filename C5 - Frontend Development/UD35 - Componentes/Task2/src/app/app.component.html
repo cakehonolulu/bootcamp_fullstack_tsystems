@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <h4 style="text-align: center">Fill out the form</h4>
+  <hr />
+
+  <form [formGroup]="form">
+    <div class="form-group row">
+      <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+      <div class="input-group">
+        <input formControlName="name" type="text" class="form-control" /> <br />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="input-group">
+        <input formControlName="email" type="text" class="form-control" />
+        <br />
+      </div>
+      <div *ngIf="emailValidator == false" class="text-danger">
+        Invalid Email Format
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-2 col-form-label">Message</label>
+      <div class="input-group">
+        <textarea formControlName="message" type="text" class="form-control">
+        </textarea
+        ><br />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputCaptcha" class="col-sm-2 col-form-label"
+        >2 + 3 = ?</label
+      >
+      <div class="input-group">
+        <input formControlName="captcha" type="text" class="form-control" />
+        <br />
+      </div>
+      <div *ngIf="captchaValidator == false" class="text-danger">
+        Invalid Capthca Validation
+      </div>
+    </div>
+  </form>
+
+  <button (click)="save()" type="button" class="btn btn-primary mt-3">
+    Send <i class="bi bi-save"></i>
+  </button>
+
+  <result-table [results]="results"></result-table>
+</div>
+
+<router-outlet></router-outlet>
